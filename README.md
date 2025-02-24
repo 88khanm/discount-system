@@ -5,15 +5,15 @@
 
 The Discount System is a Laravel API module designed to apply discounts to cart totals. It supports:
 
-Percentage & Fixed Amount Discounts
+- Percentage & Fixed Amount Discounts<br>
 
-Minimum Cart Total Requirements
+- Minimum Cart Total Requirements<br>
 
-Applicable to Specific Products or Categories
+- Applicable to Specific Products or Categories<br>
 
-Valid Date Ranges
+- Valid Date Ranges<br>
 
-Stacking Multiple Discounts
+- Stacking Multiple Discounts<br>
 
 
 ## Installation
@@ -340,7 +340,7 @@ Status Code 422
 
 ## Unit Test
 
-- PASS  Tests\Unit\DiscountServiceTest
+ PASS  Tests\Unit\DiscountServiceTest
 - discount applies correctly                                                                                   1.16s<br>
 - zero discount returns full price                                                                             0.03s<br>
 - full discount returns zero                                                                                   0.03s<br>
@@ -350,7 +350,7 @@ Status Code 422
 
 ## Feature OR DB Test
 
-- PASS Tests\Feature\DiscountApiTest <br>
+ PASS Tests\Feature\DiscountApiTest <br>
 - is discount model exist 1.54s <br>
 - can create a discount 0.32s <br>
 - apply discount to cart 0.03s <br>
@@ -360,7 +360,7 @@ Status Code 422
 - non stackable discount blocks others 0.03s <br>
 - stackable discount apply 0.03s
 
-- Tests: 13 passed (24 assertions) Duration: 4.92s
+Tests: 13 passed (24 assertions) Duration: 4.92s
 
 To run tests, run the following command
 
@@ -369,5 +369,5 @@ To run tests, run the following command
 ```
 ## Feedback
 
-If you have any feedback, please reach out to me at 88khanm@fake.com
+If you have any feedback, please reach out to me at 88khanm@gmail.com
 
