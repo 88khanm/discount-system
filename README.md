@@ -39,7 +39,7 @@ php artisan serve   //Start Laravel Server
 ## Swagger OpenApi
 Swagger is an open-source framework used for designing, documenting, and testing RESTful APIs. It provides an interactive UI where developers can explore API endpoints, send requests, and view responses—all without needing a separate tool like Postman.
 
-i have integrated, you can access Swagger by navigating to 
+You can access Swagger by navigating to 
     **http://localhost:your-port-number/api/documentation** 
 Ensure that your application is running before accessing the Swagger interface.
 
