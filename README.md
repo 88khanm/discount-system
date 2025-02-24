@@ -36,7 +36,7 @@ php artisan migrate --seed     //Run migrations and seed data (after setup datab
 php artisan serve   //Start Laravel Server
 ```
     
-## API Reference
+## Swagger OpenApi
 Swagger is an open-source framework used for designing, documenting, and testing RESTful APIs. It provides an interactive UI where developers can explore API endpoints, send requests, and view responses—all without needing a separate tool like Postman.
 
 i have integrated, you can access Swagger by navigating to 
@@ -74,6 +74,7 @@ In case the Swagger interface is not accessible, I have also documented all API 
 | `active_to`      | `timestamp` | **Optional**.  |
 | `stackable`      | `boolean` | **Optional**.  |
 
+#### Discounts Apply
 
 ```http
   POST /api/discounts/apply
@@ -337,45 +338,35 @@ Status Code 422
 ```
 
 
-## Running Tests
+## Unit Test
 
-I have implemented two types of tests: Unit Tests and Feature Tests (also known as Database Tests). You can find them in the tests directory at the root of the project. Additionally, I have created factories to generate dummy data for database testing.
+- PASS  Tests\Unit\DiscountServiceTest
+- discount applies correctly                                                                                   1.16s<br>
+- zero discount returns full price                                                                             0.03s<br>
+- full discount returns zero                                                                                   0.03s<br>
+- discount does not apply if below min cart total                                                              0.03s<br>
+- discount does not apply if expired                                                                           0.03s
 
-Here are some test method names that are quite self-explanatory.
-### Unit Test ###
-PASS  Tests\Unit\DiscountServiceTest
-  discount applies correctly                                                                                   1.16s
-  zero discount returns full price                                                                             0.03s
-  full discount returns zero                                                                                   0.03s
-    discount does not apply if below min cart total                                                              0.03s
-    discount does not apply if expired                                                                           0.03s
 
-### Feature Test or DB Test ###
-PASS  Tests\Feature\DiscountApiTest
-  is discount model exist                                                                                      1.54s
-  can create a discount                                                                                        0.32s
-  apply discount to cart                                                                                       0.03s
-  discount does not apply if invalid code                                                                      0.03s
-  discount does not apply if cart total below minimum                                                          0.03s
-  get discounts list success                                                                                   0.04s
-  non stackable discount blocks others                                                                         0.03s
-  stackable discount apply                                                                                     0.03s
+## Feature OR DB Test
 
-Tests:    13 passed (24 assertions)
-Duration: 4.92s
+- PASS Tests\Feature\DiscountApiTest <br>
+- is discount model exist 1.54s <br>
+- can create a discount 0.32s <br>
+- apply discount to cart 0.03s <br>
+- discount does not apply if invalid code 0.03s <br>
+- discount does not apply if cart total below minimum 0.03s <br>
+- get discounts list success 0.04s <br>
+- non stackable discount blocks others 0.03s <br>
+- stackable discount apply 0.03s
+
+- Tests: 13 passed (24 assertions) Duration: 4.92s
 
 To run tests, run the following command
 
 ```
   php artisan test
 ```
-
-
-## Conclusion 
-
-This Discount Service is a scalable solution for handling discounts in an eCommerce platform. Future improvements include coupon expiry notifications, user-based discounts, and integration with payment gateways.
-
-
 ## Feedback
 
 If you have any feedback, please reach out to me at 88khanm@fake.com
