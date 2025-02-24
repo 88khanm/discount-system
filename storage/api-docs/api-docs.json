@@ -142,8 +142,8 @@
                         "application/json": {
                             "schema": {
                                 "required": [
-                                    "code",
-                                    "cart"
+                                    "cart_items",
+                                    "cart_total"
                                 ],
                                 "properties": {
                                     "cart_total": {

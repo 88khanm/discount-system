@@ -64,13 +64,6 @@ class DiscountController extends Controller
         ]);
 
         $discountData = $this->discountService->applyDiscount($validated);
-        
-        // if (isset($discountData['error'])) {
-        //     return response()->json(['message' => $discountData['error']], 400);
-        // }
-        // if (!$discountData || !$discountData['message']) {
-        //     return response()->json(['success' => false, 'message' => 'Invalid discount'], 400);
-        // }
 
         return response()->json([
             'discount_applied' => $discountData['discount_applied'],
