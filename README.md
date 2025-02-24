@@ -344,22 +344,22 @@ I have implemented two types of tests: Unit Tests and Feature Tests (also known 
 Here are some test method names that are quite self-explanatory.
 ### Unit Test ###
 PASS  Tests\Unit\DiscountServiceTest
-  ✓ discount applies correctly                                                                                   1.16s
-  ✓ zero discount returns full price                                                                             0.03s
-  ✓ full discount returns zero                                                                                   0.03s
-  ✓ discount does not apply if below min cart total                                                              0.03s
-  ✓ discount does not apply if expired                                                                           0.03s
+  discount applies correctly                                                                                   1.16s
+  zero discount returns full price                                                                             0.03s
+  full discount returns zero                                                                                   0.03s
+    discount does not apply if below min cart total                                                              0.03s
+    discount does not apply if expired                                                                           0.03s
 
 ### Feature Test or DB Test ###
 PASS  Tests\Feature\DiscountApiTest
-  ✓ is discount model exist                                                                                      1.54s
-  ✓ can create a discount                                                                                        0.32s
-  ✓ apply discount to cart                                                                                       0.03s
-  ✓ discount does not apply if invalid code                                                                      0.03s
-  ✓ discount does not apply if cart total below minimum                                                          0.03s
-  ✓ get discounts list success                                                                                   0.04s
-  ✓ non stackable discount blocks others                                                                         0.03s
-  ✓ stackable discount apply                                                                                     0.03s
+  is discount model exist                                                                                      1.54s
+  can create a discount                                                                                        0.32s
+  apply discount to cart                                                                                       0.03s
+  discount does not apply if invalid code                                                                      0.03s
+  discount does not apply if cart total below minimum                                                          0.03s
+  get discounts list success                                                                                   0.04s
+  non stackable discount blocks others                                                                         0.03s
+  stackable discount apply                                                                                     0.03s
 
 Tests:    13 passed (24 assertions)
 Duration: 4.92s
