@@ -40,11 +40,13 @@ php artisan serve   //Start Laravel Server
 Swagger is an open-source framework used for designing, documenting, and testing RESTful APIs. It provides an interactive UI where developers can explore API endpoints, send requests, and view responses—all without needing a separate tool like Postman.
 
 i have integrated, you can access Swagger by navigating to 
-    **http://localhost:<your-port>/api/documentation** 
+    **http://localhost:your-port-number/api/documentation** 
 Ensure that your application is running before accessing the Swagger interface.
 
 Note:
 In case the Swagger interface is not accessible, I have also documented all API routes, including their endpoints and expected responses, as a backup. This ensures you can reference the API structure and responses even if Swagger is unavailable.
+
+##### Here we are all api end points:
 
 #### Get discounts list
 
